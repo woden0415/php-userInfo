@@ -1,8 +1,6 @@
 <?php 
 	
-	// if(!isset($_POST['submit']){
-	// 	exit('非法访问');
-	// }
+	
 	$username = $_POST['uname'];
 	$useremail = $_POST['uemail'];
 	$userpwd = $_POST['upwd'];
