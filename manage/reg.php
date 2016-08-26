@@ -17,12 +17,12 @@
 	    exit;
 	}
 	//写入数据
-	$password = MD5($userpwd);
-	echo 'MD5:'.$password.'<br>';
+	// $password = MD5($userpwd);
+	// echo 'MD5:'.$password.'<br>';
 	// $regdate = time();
 	// echo '注册时间:'.$regdate.'<br>';
 	// $sql = "INSERT INTO user(uname,uemail,upwd)VALUES('xuzhu','xuzhu@123.com','xuzhu123!')";
-	$sql = "INSERT INTO user(uname,uemail,upwd)VALUES('$username','$useremail','$password')";
+	$sql = "INSERT INTO user(uname,uemail,upwd)VALUES('$username','$useremail','$userpwd')";
 	if(mysqli_query($conn,$sql)){
 	    exit('用户注册成功！点击此处 <a href="login.html">登录</a>');
 	} else {
