@@ -5,13 +5,13 @@
 	$server = "localhost";
 	$sqlname = "root";
 	$sqlpwd = "root";
+	$db = "userInfo";
 
-
-	/*创建连接*/
-	$conn = new mysqli($servername, $username, $password);
-	/*检测连接*/
-	if ($conn->connect_error) {
-	    die("连接失败: " . $conn->connect_error);
-	} 
+	$conn = mysqli_connect($server,$sqlname,$sqlpwd,$db);
+	if(!$conn){
+		die("连接错误：". mysqli_connect_errno().mysqli_connect_error());
+	}else{
 		echo "连接成功";
+	}
+	
  ?>
