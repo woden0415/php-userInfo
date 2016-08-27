@@ -4,10 +4,7 @@
 	$username = $_POST['uname'];
 	$useremail = $_POST['uemail'];
 	$userpwd = $_POST['upwd'];
-	echo $username;
-	echo $useremail;
-	echo $userpwd;
-	
+
 	//包含数据库连接文件
 	include('conn.php');
 	//检测用户名是否已经存在
@@ -17,12 +14,8 @@
 	    exit;
 	}
 	//写入数据
-	// $password = MD5($userpwd);
-	// echo 'MD5:'.$password.'<br>';
-	// $regdate = time();
-	// echo '注册时间:'.$regdate.'<br>';
-	// $sql = "INSERT INTO user(uname,uemail,upwd)VALUES('xuzhu','xuzhu@123.com','xuzhu123!')";
-	$sql = "INSERT INTO user(uname,uemail,upwd)VALUES('$username','$useremail','$userpwd')";
+	$password = MD5($userpwd);
+	$sql = "INSERT INTO user(uname,uemail,upwd)VALUES('$username','$useremail','$password')";
 	if(mysqli_query($conn,$sql)){
 	    exit('用户注册成功！点击此处 <a href="login.html">登录</a>');
 	} else {
