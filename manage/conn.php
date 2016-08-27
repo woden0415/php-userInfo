@@ -1,6 +1,6 @@
 <?php 
 	
-	/*edit by wangdong*/
+	/*edit by woden*/
 
 	$server = "localhost";
 	$sqlname = "root";

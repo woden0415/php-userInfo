@@ -1,5 +1,6 @@
 <?php 
 	
+	/*eidt by woden*/
 	
 	$username = $_POST['uname'];
 	$useremail = $_POST['uemail'];
@@ -17,7 +18,7 @@
 	$password = MD5($userpwd);
 	$sql = "INSERT INTO user(uname,uemail,upwd)VALUES('$username','$useremail','$password')";
 	if(mysqli_query($conn,$sql)){
-	    exit('用户注册成功！点击此处 <a href="login.html">登录</a>');
+	    exit('用户注册成功！点击此处 <a href="../tpl/login.html">登录</a>');
 	} else {
 	    echo '抱歉！添加数据失败：'.mysqli_error(),'<br />';
 	    echo '点击此处 <a href="javascript:history.back(-1);">返回</a> 重试';
