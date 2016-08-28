@@ -18,8 +18,17 @@
 
 	//包含数据库文件
 	include('conn.php');
+	$sql = "SELECT * FROM user WHERE uname = '$username' AND upwd ='$password' LIMIT 1";
+	$check_query = mysqli_query($conn,$sql);
 	
-	$check_query = mysqli_query("select uname from user where uname = '$username' and upwd ='$password' limit 1");
+	// mysqli_query()参数必须加上数据库conn	
+	/*if($check_query){
+		echo 'mysqli_query()函数正确';
+	}else{
+		echo 'mysqli_query()函数不正确';		
+	}*/
+
+
 	if($result = mysqli_fetch_array($check_query)){
 		//登录成功
 		$_SESSION['username'] = $username;
