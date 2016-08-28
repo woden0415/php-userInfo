@@ -11,7 +11,7 @@
 	if(!$conn){
 		die("连接错误：". mysqli_connect_errno().mysqli_connect_error());
 	}else{
-		echo "连接成功";
+		echo '连接成功<br>';
 	}
 	
  ?>
