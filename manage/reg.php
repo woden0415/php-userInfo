@@ -9,7 +9,7 @@
 	//包含数据库连接文件
 	include('conn.php');
 	//检测用户名是否已经存在
-	$check_query = mysqli_query("select uname from userinfo.user where uname=$username");
+	$check_query = mysqli_query($conn,"select uname from user where uname='$username'");
 	if(mysqli_fetch_array($check_query)){
 	    echo '错误：用户名 ',$username,' 已存在。<a href="javascript:history.back(-1);">返回</a>';
 	    exit;
