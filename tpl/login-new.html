@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>登录新页面</title>
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/signin.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<form class="form-signin">
+			<h2 class="form-signin-heading">用户登录</h2>
+			<!--用户名-->
+			<label for="uname" class="sr-only">用户名</label>
+			<input class="form-control"  id="uname" type="text" placeholder="请输入用户名" required autofocus>
+			<!--密码-->
+			<label for="upwd" class="sr-only">密码</label>
+			<input class="form-control" id="upwd" type="password" placeholder="请输入密码" required>
+			<div class="checkbox">
+				<label>
+					<input name="checkname" type="checkbox" value="remember-me" > 记住密码
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+			<a href="reg-new.html"><button class="btn btn-lg btn-link btn-block" type="button">注册</button></a>
+		</form>
+	</div> <!-- /container -->
+</body>
+</html>
