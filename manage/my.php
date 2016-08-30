@@ -6,6 +6,12 @@
 		header("Location: ../tpl/login.html");
 		exit();
 	}
+
+	if($_GET['action'] == "delete"){
+	    $uanme = $_GET["uname"];
+
+	}
+
 	echo '进入个人中心';
 	include 'conn.php';
 	$username = $_SESSION['username'];
@@ -18,4 +24,6 @@
 	echo '邮箱：',$rows['uemail'],'<br />';
 	echo '注册日期：',$rows['regdate'],'<br />';
 	echo '<a href="login.php?action=logout">注销</a> 登录<br />';
+	echo '<a href="delete.php?action=delete&uname='.$username.'"><button>删除个人信息</button></a><br>';
+
  ?>
