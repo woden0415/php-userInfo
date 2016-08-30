@@ -18,5 +18,4 @@
 	echo '邮箱：',$rows['uemail'],'<br />';
 	echo '注册日期：',$rows['regdate'],'<br />';
 	echo '<a href="login.php?action=logout">注销</a> 登录<br />';
-
  ?>
