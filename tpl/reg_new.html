@@ -11,25 +11,28 @@
 	<div class="content">
 		<h1>注册</h1>
 		<div class="blankcol"></div>		<!--空白符-->
-		<div class="input-group">
+		<div class="input-group has-feedback">
 	    	<span class="input-group-addon" id="basic-addon1">
 	    		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 	    	</span>
-			<input type="text" class="form-control" placeholder="用户名" name="uname" aria-describedby="basic-addon1">
+			<input type="text" class="form-control uname" placeholder="用户名" name="uname" aria-describedby="basic-addon1">
+			<span class="glyphicon glyphicon-warning-sign form-control-feedback hidden" aria-hidden="true"></span>
 		</div>
 		<div class="blankcol"></div>		<!--空白符-->
-		<div class="input-group">
+		<div class="input-group has-feedback">
 	    	<span class="input-group-addon" id="basic-addon1">
 	    		<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 	    	</span>
-			<input type="text" class="form-control" placeholder="邮箱" name="uemail" aria-describedby="basic-addon1">
+			<input type="email" class="form-control uemail" placeholder="邮箱" name="uemail" aria-describedby="basic-addon1">
+			<span class="glyphicon glyphicon-warning-sign form-control-feedback hidden" aria-hidden="true"></span>
 		</div>
 		<div class="blankcol"></div>		<!--空白符-->
-		<div class="input-group">
+		<div class="input-group has-feedback">
 	    	<span class="input-group-addon" id="basic-addon1">
 	    		<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
 	    	</span>
-			<input type="text" class="form-control" placeholder="密码" name="upwd" aria-describedby="basic-addon1">
+			<input type="password" class="form-control upwd" placeholder="密码" name="upwd" aria-describedby="basic-addon1">
+			<span class="glyphicon glyphicon-warning-sign form-control-feedback hidden" aria-hidden="true"></span>
 		</div>
 		<div class="blankcol"></div>
 		<div class="blankcol"></div>
@@ -38,7 +41,7 @@
 			<div class="col-md-4">
 				<div class="btn-group btn-group-justified">
 					<div class="btn-group">
-						<button type="button" class="btn btn-default">注册</button>
+						<button type="button" class="btn btn-default btnReg">注册</button>
 					</div>
 				</div>
 			</div>
@@ -46,4 +49,7 @@
 		</div>
 	</div>
 </body>
+	<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+	<script src="../assets/js/common.js"></script>
 </html>
