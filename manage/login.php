@@ -8,7 +8,8 @@
 	    echo '注销登录成功！点击此处 <a href="../tpl/login.html">登录</a>';
 	    exit;
 	}
-
+	
+	
 	//登录
 	$username = $_POST['uname'];		//用户名
 	$password = MD5($_POST['upwd']);	//MD5密码
